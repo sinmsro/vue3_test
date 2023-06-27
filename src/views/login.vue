@@ -1,5 +1,6 @@
 <template>
-    <el-form
+  <div style="display: flex;justify-content: center;align-items: center;height: 100vh">  
+     <el-form
       ref="ruleFormRef"
       :model="ruleForm"
       :rules="rules"
@@ -21,7 +22,9 @@
         <el-button @click="resetForm(ruleFormRef)">Reset</el-button>
       </el-form-item>
     </el-form>
+  </div>
   </template>
+  
   
   <script lang="ts" setup>
   import { reactive, ref } from 'vue'
