@@ -1,6 +1,5 @@
-import axios from "axios";
+import axios from "@/utils/request";
 
-export const login = () => {
-    // 返回的数据格式可以和服务端约定
-    return axios.post('/api/login');
+export const loadMenu=()=>{
+    return axios.get('/api/memus')
 }

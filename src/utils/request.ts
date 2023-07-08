@@ -2,7 +2,6 @@ import Axios, { Method, ResponseType, AxiosResponse, InternalAxiosRequestConfig 
 import { ElMessage } from 'element-plus'
 
 
-// const baseURL = 'http://www.mock.com'
 const axios = Axios.create({
   // baseURL,
   timeout: 20000
@@ -30,7 +29,7 @@ return response
 // 请求拦截器
 axios.interceptors.request.use(
   (config: InternalAxiosRequestConfig) => {
-    const token = sessionStorage.getItem('accessToken')
+    const token = sessionStorage.getItem('token')
     if (token) {
       config.headers.token = token
     }
